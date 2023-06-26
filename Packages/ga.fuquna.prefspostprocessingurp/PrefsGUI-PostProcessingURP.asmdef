@@ -1,0 +1,20 @@
+{
+    "name": "PrefsGUI-PostProcessingURP",
+    "rootNamespace": "",
+    "references": [
+        "GUID:df380645f10b7bc4b97d4f5eb6303d95",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:2b1b0416520827b409049c7e4d90bcc1",
+        "GUID:436548315e6ca5b499a1008921425bfb",
+        "GUID:9160181cbc72aab4b869710b61b8f148"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
