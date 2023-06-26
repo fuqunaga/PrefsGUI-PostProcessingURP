@@ -1,13 +1,10 @@
 ﻿using System;
-using PrefsGUI;
-using PrefsGUI.RosettaUI;
-using RosettaUI;
 using UnityEngine.Rendering;
 
 namespace PrefsGUI.PostProcessingURP
 {
     [Serializable]
-    public class PrefsVolumeParameter<T> : IElementCreator
+    public partial class PrefsVolumeParameter<T> : IPrefsVolumeParameter
         where T : struct
     {
         public PrefsBool overrideState;
@@ -15,6 +12,9 @@ namespace PrefsGUI.PostProcessingURP
 
         private T? _min;
         private T? _max;
+        private VolumeParameter<T> _volumeParameter;
+        
+        public Type ParameterType => typeof(T);
         
         public PrefsVolumeParameter(string key, T defaultValue = default)
         {
@@ -24,8 +24,13 @@ namespace PrefsGUI.PostProcessingURP
     
         public void Bind(VolumeParameter<T> parameter)
         {
-            overrideState.RegisterValueChangedCallbackAndCallOnce(() => parameter.overrideState = overrideState);
-            value.RegisterValueChangedCallbackAndCallOnce(() => parameter.value = value);
+            if ( parameter == null ) return;
+            
+            Unbind();
+            
+            _volumeParameter = parameter;
+            overrideState.RegisterValueChangedCallbackAndCallOnce(OnValueChangedOverrideState);
+            value.RegisterValueChangedCallbackAndCallOnce(OnValueChanged);
 
             switch (parameter)
             {
@@ -39,28 +44,23 @@ namespace PrefsGUI.PostProcessingURP
                     break;
             }
         }
-    
-        public Element CreateElement(LabelElement label)
-        {
-            var element = UI.Row(
-                overrideState.CreateFieldRaw(),
-                (_min.HasValue && _max.HasValue)
-                    ? value.CreateSliderRaw(label, _min.Value, _max.Value)
-                    : value.CreateFieldRaw(label),
-                PrefsGUIElement.CreateDefaultButtonElement(
-                    onClick: () =>
-                    {
-                        overrideState.ResetToDefault();
-                        value.ResetToDefault();
-                    },
-                    isDefault: () => overrideState.IsDefault && value.IsDefault
-                )
-            );
-            
-            PrefsGUIExtension.SubscribeSyncedFlag(overrideState, element);
-            PrefsGUIExtension.SubscribeSyncedFlag(value, element);
 
-            return element;
+        private void Unbind()
+        {
+            overrideState.UnregisterValueChangedCallback(OnValueChangedOverrideState);
+            value.UnregisterValueChangedCallback(OnValueChanged);
+
+            _min = null;
+            _max = null;
         }
+
+        private void OnValueChangedOverrideState() => _volumeParameter.overrideState = overrideState;
+
+        private void OnValueChanged() => _volumeParameter.value = value;
+    }
+
+    public partial interface IPrefsVolumeParameter
+    {
+        Type ParameterType { get; }
     }
 }

@@ -16,7 +16,7 @@ namespace PrefsGUI.PostProcessingURP.Example
         {
             return UI.Window(
                 UI.Page(
-                    UI.FieldIfObjectFound<PrefsVolume>()
+                    UI.FieldIfObjectFound<PrefsVolumeBehaviour>()
                 )
             );
         }

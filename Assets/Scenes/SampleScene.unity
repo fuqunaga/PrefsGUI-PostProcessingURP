@@ -427,164 +427,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1151814635
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1151814636}
-  - component: {fileID: 1151814637}
-  m_Layer: 0
-  m_Name: PrefsVolume
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1151814636
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151814635}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1151814637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151814635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 895211b0e24647ef91c96eae5f8d3b75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volume: {fileID: 832575518}
-  volumeWait:
-    _key: Volume_Weight
-    defaultValue: 1
-  bloom:
-    active:
-      _key: URP_Bloom_Active
-      defaultValue: 0
-    threshold:
-      overrideState:
-        _key: URP_Bloom_Threshold_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Bloom_Threshold_Value
-        defaultValue: 0
-    intensity:
-      overrideState:
-        _key: URP_Bloom_Intensity_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Bloom_Intensity_Value
-        defaultValue: 0
-    scatter:
-      overrideState:
-        _key: URP_Bloom_Scatter_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Bloom_Scatter_Value
-        defaultValue: 0
-    clamp:
-      overrideState:
-        _key: URP_Bloom_Clamp_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Bloom_Clamp_Value
-        defaultValue: 0
-    tint:
-      overrideState:
-        _key: URP_Bloom_Tint_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Bloom_Tint_Value
-        defaultValue: {r: 0, g: 0, b: 0, a: 0}
-    highQualityFiltering:
-      overrideState:
-        _key: URP_Bloom_Highqualityfiltering_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Bloom_Highqualityfiltering_Value
-        defaultValue: 0
-    dirtIntensity:
-      overrideState:
-        _key: URP_Bloom_Dirtintensity_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Bloom_Dirtintensity_Value
-        defaultValue: 0
-  whiteBalance:
-    active:
-      _key: URP_WhiteBalance_Active
-      defaultValue: 0
-    temperature:
-      overrideState:
-        _key: URP_WhiteBalance_Temperature_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_WhiteBalance_Temperature_Value
-        defaultValue: 0
-    tint:
-      overrideState:
-        _key: URP_WhiteBalance_Tint_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_WhiteBalance_Tint_Value
-        defaultValue: 0
-  vignette:
-    active:
-      _key: URP_Vignette_Active
-      defaultValue: 0
-    color:
-      overrideState:
-        _key: URP_Vignette_Color_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Vignette_Color_Value
-        defaultValue: {r: 0, g: 0, b: 0, a: 0}
-    center:
-      overrideState:
-        _key: URP_Vignette_Center_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Vignette_Center_Value
-        defaultValue: {x: 0, y: 0}
-    intensity:
-      overrideState:
-        _key: URP_Vignette_Intensity_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Vignette_Intensity_Value
-        defaultValue: 0
-    smoothness:
-      overrideState:
-        _key: URP_Vignette_Smoothness_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Vignette_Smoothness_Value
-        defaultValue: 0
-    rounded:
-      overrideState:
-        _key: URP_Vignette_Rounded_OverrideState
-        defaultValue: 0
-      value:
-        _key: URP_Vignette_Rounded_Value
-        defaultValue: 0
 --- !u!1 &1394660293 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 606649722984901848, guid: 4ed1865184a851c448a44589b9f302b9,
@@ -603,6 +445,651 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed95c021483704442bc42dfa3046296a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1495043566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495043568}
+  - component: {fileID: 1495043567}
+  m_Layer: 0
+  m_Name: PP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1495043567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495043566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895211b0e24647ef91c96eae5f8d3b75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 832575518}
+  prefsVolume:
+    bloom:
+      active:
+        _key: URP_Bloom_Active
+        defaultValue: 0
+      threshold:
+        overrideState:
+          _key: URP_Bloom_Threshold_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Bloom_Threshold_Value
+          defaultValue: 0
+      intensity:
+        overrideState:
+          _key: URP_Bloom_Intensity_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Bloom_Intensity_Value
+          defaultValue: 0
+      scatter:
+        overrideState:
+          _key: URP_Bloom_Scatter_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Bloom_Scatter_Value
+          defaultValue: 0
+      clamp:
+        overrideState:
+          _key: URP_Bloom_Clamp_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Bloom_Clamp_Value
+          defaultValue: 0
+      tint:
+        overrideState:
+          _key: URP_Bloom_Tint_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Bloom_Tint_Value
+          defaultValue: {r: 0, g: 0, b: 0, a: 0}
+      highQualityFiltering:
+        overrideState:
+          _key: URP_Bloom_Highqualityfiltering_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Bloom_Highqualityfiltering_Value
+          defaultValue: 0
+      dirtIntensity:
+        overrideState:
+          _key: URP_Bloom_Dirtintensity_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Bloom_Dirtintensity_Value
+          defaultValue: 0
+    channelMixer:
+      active:
+        _key: URP_ChannelMixer_Active
+        defaultValue: 0
+      redOutRedIn:
+        overrideState:
+          _key: URP_ChannelMixer_Redoutredin_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ChannelMixer_Redoutredin_Value
+          defaultValue: 0
+      redOutGreenIn:
+        overrideState:
+          _key: URP_ChannelMixer_Redoutgreenin_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ChannelMixer_Redoutgreenin_Value
+          defaultValue: 0
+      redOutBlueIn:
+        overrideState:
+          _key: URP_ChannelMixer_Redoutbluein_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ChannelMixer_Redoutbluein_Value
+          defaultValue: 0
+      greenOutRedIn:
+        overrideState:
+          _key: URP_ChannelMixer_Greenoutredin_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ChannelMixer_Greenoutredin_Value
+          defaultValue: 0
+      greenOutGreenIn:
+        overrideState:
+          _key: URP_ChannelMixer_Greenoutgreenin_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ChannelMixer_Greenoutgreenin_Value
+          defaultValue: 0
+      greenOutBlueIn:
+        overrideState:
+          _key: URP_ChannelMixer_Greenoutbluein_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ChannelMixer_Greenoutbluein_Value
+          defaultValue: 0
+      blueOutRedIn:
+        overrideState:
+          _key: URP_ChannelMixer_Blueoutredin_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ChannelMixer_Blueoutredin_Value
+          defaultValue: 0
+      blueOutGreenIn:
+        overrideState:
+          _key: URP_ChannelMixer_Blueoutgreenin_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ChannelMixer_Blueoutgreenin_Value
+          defaultValue: 0
+      blueOutBlueIn:
+        overrideState:
+          _key: URP_ChannelMixer_Blueoutbluein_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ChannelMixer_Blueoutbluein_Value
+          defaultValue: 0
+    chromaticAberration:
+      active:
+        _key: URP_ChromaticAberration_Active
+        defaultValue: 0
+      intensity:
+        overrideState:
+          _key: URP_ChromaticAberration_Intensity_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ChromaticAberration_Intensity_Value
+          defaultValue: 0
+    colorAdjustments:
+      active:
+        _key: URP_ColorAdjustments_Active
+        defaultValue: 0
+      postExposure:
+        overrideState:
+          _key: URP_ColorAdjustments_Postexposure_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ColorAdjustments_Postexposure_Value
+          defaultValue: 0
+      contrast:
+        overrideState:
+          _key: URP_ColorAdjustments_Contrast_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ColorAdjustments_Contrast_Value
+          defaultValue: 0
+      colorFilter:
+        overrideState:
+          _key: URP_ColorAdjustments_Colorfilter_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ColorAdjustments_Colorfilter_Value
+          defaultValue: {r: 0, g: 0, b: 0, a: 0}
+      hueShift:
+        overrideState:
+          _key: URP_ColorAdjustments_Hueshift_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ColorAdjustments_Hueshift_Value
+          defaultValue: 0
+      saturation:
+        overrideState:
+          _key: URP_ColorAdjustments_Saturation_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ColorAdjustments_Saturation_Value
+          defaultValue: 0
+    colorLookup:
+      active:
+        _key: URP_ColorLookup_Active
+        defaultValue: 0
+      contribution:
+        overrideState:
+          _key: URP_ColorLookup_Contribution_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ColorLookup_Contribution_Value
+          defaultValue: 0
+    depthOfField:
+      active:
+        _key: URP_DepthOfField_Active
+        defaultValue: 0
+      mode:
+        overrideState:
+          _key: URP_DepthOfField_Mode_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Mode_Value
+          defaultValue: 0
+      gaussianStart:
+        overrideState:
+          _key: URP_DepthOfField_Gaussianstart_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Gaussianstart_Value
+          defaultValue: 0
+      gaussianEnd:
+        overrideState:
+          _key: URP_DepthOfField_Gaussianend_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Gaussianend_Value
+          defaultValue: 0
+      gaussianMaxRadius:
+        overrideState:
+          _key: URP_DepthOfField_Gaussianmaxradius_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Gaussianmaxradius_Value
+          defaultValue: 0
+      highQualitySampling:
+        overrideState:
+          _key: URP_DepthOfField_Highqualitysampling_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Highqualitysampling_Value
+          defaultValue: 0
+      focusDistance:
+        overrideState:
+          _key: URP_DepthOfField_Focusdistance_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Focusdistance_Value
+          defaultValue: 0
+      aperture:
+        overrideState:
+          _key: URP_DepthOfField_Aperture_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Aperture_Value
+          defaultValue: 0
+      focalLength:
+        overrideState:
+          _key: URP_DepthOfField_Focallength_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Focallength_Value
+          defaultValue: 0
+      bladeCount:
+        overrideState:
+          _key: URP_DepthOfField_Bladecount_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Bladecount_Value
+          defaultValue: 0
+      bladeCurvature:
+        overrideState:
+          _key: URP_DepthOfField_Bladecurvature_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Bladecurvature_Value
+          defaultValue: 0
+      bladeRotation:
+        overrideState:
+          _key: URP_DepthOfField_Bladerotation_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_DepthOfField_Bladerotation_Value
+          defaultValue: 0
+    filmGrain:
+      active:
+        _key: URP_FilmGrain_Active
+        defaultValue: 0
+      type:
+        overrideState:
+          _key: URP_FilmGrain_Type_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_FilmGrain_Type_Value
+          defaultValue: 0
+      intensity:
+        overrideState:
+          _key: URP_FilmGrain_Intensity_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_FilmGrain_Intensity_Value
+          defaultValue: 0
+      response:
+        overrideState:
+          _key: URP_FilmGrain_Response_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_FilmGrain_Response_Value
+          defaultValue: 0
+    lensDistortion:
+      active:
+        _key: URP_LensDistortion_Active
+        defaultValue: 0
+      intensity:
+        overrideState:
+          _key: URP_LensDistortion_Intensity_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_LensDistortion_Intensity_Value
+          defaultValue: 0
+      xMultiplier:
+        overrideState:
+          _key: URP_LensDistortion_Xmultiplier_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_LensDistortion_Xmultiplier_Value
+          defaultValue: 0
+      yMultiplier:
+        overrideState:
+          _key: URP_LensDistortion_Ymultiplier_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_LensDistortion_Ymultiplier_Value
+          defaultValue: 0
+      center:
+        overrideState:
+          _key: URP_LensDistortion_Center_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_LensDistortion_Center_Value
+          defaultValue: {x: 0, y: 0}
+      scale:
+        overrideState:
+          _key: URP_LensDistortion_Scale_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_LensDistortion_Scale_Value
+          defaultValue: 0
+    liftGammaGain:
+      active:
+        _key: URP_LiftGammaGain_Active
+        defaultValue: 0
+      lift:
+        overrideState:
+          _key: URP_LiftGammaGain_Lift_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_LiftGammaGain_Lift_Value
+          defaultValue: {x: 0, y: 0, z: 0, w: 0}
+      gamma:
+        overrideState:
+          _key: URP_LiftGammaGain_Gamma_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_LiftGammaGain_Gamma_Value
+          defaultValue: {x: 0, y: 0, z: 0, w: 0}
+      gain:
+        overrideState:
+          _key: URP_LiftGammaGain_Gain_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_LiftGammaGain_Gain_Value
+          defaultValue: {x: 0, y: 0, z: 0, w: 0}
+    motionBlur:
+      active:
+        _key: URP_MotionBlur_Active
+        defaultValue: 0
+      mode:
+        overrideState:
+          _key: URP_MotionBlur_Mode_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_MotionBlur_Mode_Value
+          defaultValue: 0
+      quality:
+        overrideState:
+          _key: URP_MotionBlur_Quality_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_MotionBlur_Quality_Value
+          defaultValue: 0
+      intensity:
+        overrideState:
+          _key: URP_MotionBlur_Intensity_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_MotionBlur_Intensity_Value
+          defaultValue: 0
+      clamp:
+        overrideState:
+          _key: URP_MotionBlur_Clamp_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_MotionBlur_Clamp_Value
+          defaultValue: 0
+    paniniProjection:
+      active:
+        _key: URP_PaniniProjection_Active
+        defaultValue: 0
+      distance:
+        overrideState:
+          _key: URP_PaniniProjection_Distance_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_PaniniProjection_Distance_Value
+          defaultValue: 0
+      cropToFit:
+        overrideState:
+          _key: URP_PaniniProjection_Croptofit_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_PaniniProjection_Croptofit_Value
+          defaultValue: 0
+    shadowsMidtonesHighlights:
+      active:
+        _key: URP_ShadowsMidtonesHighlights_Active
+        defaultValue: 0
+      shadows:
+        overrideState:
+          _key: URP_ShadowsMidtonesHighlights_Shadows_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ShadowsMidtonesHighlights_Shadows_Value
+          defaultValue: {x: 0, y: 0, z: 0, w: 0}
+      midtones:
+        overrideState:
+          _key: URP_ShadowsMidtonesHighlights_Midtones_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ShadowsMidtonesHighlights_Midtones_Value
+          defaultValue: {x: 0, y: 0, z: 0, w: 0}
+      highlights:
+        overrideState:
+          _key: URP_ShadowsMidtonesHighlights_Highlights_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ShadowsMidtonesHighlights_Highlights_Value
+          defaultValue: {x: 0, y: 0, z: 0, w: 0}
+      shadowsStart:
+        overrideState:
+          _key: URP_ShadowsMidtonesHighlights_Shadowsstart_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ShadowsMidtonesHighlights_Shadowsstart_Value
+          defaultValue: 0
+      shadowsEnd:
+        overrideState:
+          _key: URP_ShadowsMidtonesHighlights_Shadowsend_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ShadowsMidtonesHighlights_Shadowsend_Value
+          defaultValue: 0
+      highlightsStart:
+        overrideState:
+          _key: URP_ShadowsMidtonesHighlights_Highlightsstart_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ShadowsMidtonesHighlights_Highlightsstart_Value
+          defaultValue: 0
+      highlightsEnd:
+        overrideState:
+          _key: URP_ShadowsMidtonesHighlights_Highlightsend_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_ShadowsMidtonesHighlights_Highlightsend_Value
+          defaultValue: 0
+    splitToning:
+      active:
+        _key: URP_SplitToning_Active
+        defaultValue: 0
+      shadows:
+        overrideState:
+          _key: URP_SplitToning_Shadows_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_SplitToning_Shadows_Value
+          defaultValue: {r: 0, g: 0, b: 0, a: 0}
+      highlights:
+        overrideState:
+          _key: URP_SplitToning_Highlights_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_SplitToning_Highlights_Value
+          defaultValue: {r: 0, g: 0, b: 0, a: 0}
+      balance:
+        overrideState:
+          _key: URP_SplitToning_Balance_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_SplitToning_Balance_Value
+          defaultValue: 0
+    tonemapping:
+      active:
+        _key: URP_Tonemapping_Active
+        defaultValue: 0
+      mode:
+        overrideState:
+          _key: URP_Tonemapping_Mode_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Tonemapping_Mode_Value
+          defaultValue: 0
+      acesPreset:
+        overrideState:
+          _key: URP_Tonemapping_Acespreset_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Tonemapping_Acespreset_Value
+          defaultValue: 0
+      hueShiftAmount:
+        overrideState:
+          _key: URP_Tonemapping_Hueshiftamount_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Tonemapping_Hueshiftamount_Value
+          defaultValue: 0
+      detectPaperWhite:
+        overrideState:
+          _key: URP_Tonemapping_Detectpaperwhite_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Tonemapping_Detectpaperwhite_Value
+          defaultValue: 0
+      paperWhite:
+        overrideState:
+          _key: URP_Tonemapping_Paperwhite_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Tonemapping_Paperwhite_Value
+          defaultValue: 0
+      detectBrightnessLimits:
+        overrideState:
+          _key: URP_Tonemapping_Detectbrightnesslimits_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Tonemapping_Detectbrightnesslimits_Value
+          defaultValue: 0
+      minNits:
+        overrideState:
+          _key: URP_Tonemapping_Minnits_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Tonemapping_Minnits_Value
+          defaultValue: 0
+      maxNits:
+        overrideState:
+          _key: URP_Tonemapping_Maxnits_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Tonemapping_Maxnits_Value
+          defaultValue: 0
+    vignette:
+      active:
+        _key: URP_Vignette_Active
+        defaultValue: 0
+      color:
+        overrideState:
+          _key: URP_Vignette_Color_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Vignette_Color_Value
+          defaultValue: {r: 0, g: 0, b: 0, a: 0}
+      center:
+        overrideState:
+          _key: URP_Vignette_Center_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Vignette_Center_Value
+          defaultValue: {x: 0, y: 0}
+      intensity:
+        overrideState:
+          _key: URP_Vignette_Intensity_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Vignette_Intensity_Value
+          defaultValue: 0
+      smoothness:
+        overrideState:
+          _key: URP_Vignette_Smoothness_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Vignette_Smoothness_Value
+          defaultValue: 0
+      rounded:
+        overrideState:
+          _key: URP_Vignette_Rounded_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_Vignette_Rounded_Value
+          defaultValue: 0
+    whiteBalance:
+      active:
+        _key: URP_WhiteBalance_Active
+        defaultValue: 0
+      temperature:
+        overrideState:
+          _key: URP_WhiteBalance_Temperature_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_WhiteBalance_Temperature_Value
+          defaultValue: 0
+      tint:
+        overrideState:
+          _key: URP_WhiteBalance_Tint_OverrideState
+          defaultValue: 0
+        value:
+          _key: URP_WhiteBalance_Tint_Value
+          defaultValue: 0
+  volumeWait:
+    _key: Volume_Weight
+    defaultValue: 1
+--- !u!4 &1495043568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495043566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2116446085
 PrefabInstance:
   m_ObjectHideFlags: 0

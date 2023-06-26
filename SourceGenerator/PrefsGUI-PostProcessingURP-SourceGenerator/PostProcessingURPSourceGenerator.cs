@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Text;
+
 
 namespace PrefsGUI.PostProcessingURP.SourceGenerator
 {
@@ -29,14 +31,21 @@ namespace PrefsGUI.PostProcessingURP.SourceGenerator
                 .GetTypeMembers()
                 .Where(typeSymbol => !typeSymbol.IsAbstract && typeSymbol.BaseType?.Name == "VolumeComponent");
 
+            var generatedVolumeComponentTypes = new List<INamedTypeSymbol>();
 
             foreach (var volumeComponentType in volumeComponentTypes)
             {
-                AddPrefsVolumeComponent(volumeComponentType, context);
+                var success = GeneratePrefsVolumeComponent(volumeComponentType, context);
+                if (success)
+                {
+                    generatedVolumeComponentTypes.Add(volumeComponentType);
+                }
             }
+
+            GeneratePrefsVolume(generatedVolumeComponentTypes, context);
         }
 
-        private static void AddPrefsVolumeComponent(INamedTypeSymbol typeSymbol, GeneratorExecutionContext context)
+        private static bool GeneratePrefsVolumeComponent(INamedTypeSymbol typeSymbol, GeneratorExecutionContext context)
         {
             var parameterAndValue = typeSymbol.GetMembers()
                 .Where(s => s.Kind == SymbolKind.Field)
@@ -50,7 +59,7 @@ namespace PrefsGUI.PostProcessingURP.SourceGenerator
                 .Where(pair => pair.valueType is { IsValueType: true }) // ignore class type like Texture
                 .ToImmutableList();
             
-            if ( parameterAndValue.Count == 0 ) return;
+            if ( parameterAndValue.Count == 0 ) return false;
             
             var componentName = typeSymbol.Name;
             var className = $"Prefs{componentName}";
@@ -72,13 +81,21 @@ namespace PrefsGUI.PostProcessingURP.SourceGenerator
 
             var sourceText =
                 $@"using System;
+using System.Collections.Generic;
 using UnityEngine.Rendering.Universal;
 
 namespace PrefsGUI.PostProcessingURP
 {{
     [Serializable]
-    public class {className} : PrefsVolumeComponent<{componentName}>
+    public partial class {className} : PrefsVolumeComponent<{componentName}>
     {{{string.Join("", fieldsTexts)}
+
+        private IReadOnlyDictionary<string, IPrefsVolumeParameter> _parameterDictionary;
+
+        public override IReadOnlyDictionary<string, IPrefsVolumeParameter> ParameterDictionary => _parameterDictionary ??= new Dictionary<string, IPrefsVolumeParameter>
+        {{{string.Join("", parameterAndValue.Select(pair => $@"
+            [nameof({pair.field.Name})] = {pair.field.Name},"))}
+        }};
 
         protected override void BindVolumeComponentToParameters({componentName} component)
         {{{string.Join("", bindTexts)}
@@ -90,7 +107,8 @@ namespace PrefsGUI.PostProcessingURP
             context.AddSource(
                 hintName: $"{className}.g.cs",
                 sourceText: SourceText.From(sourceText, Encoding.UTF8));
-
+            
+            return true;
 
             static (IFieldSymbol field, ITypeSymbol valueType) ToParameterAndValueType(IFieldSymbol fieldSymbol)
             {
@@ -106,6 +124,55 @@ namespace PrefsGUI.PostProcessingURP
                     if (typeSymbol.Name == "VolumeParameter") return typeSymbol.TypeArguments.FirstOrDefault();
                     typeSymbol = typeSymbol.BaseType;
                 }
+            }
+        }
+        
+        
+        private void GeneratePrefsVolume(List<INamedTypeSymbol> volumeComponentTypes, GeneratorExecutionContext context)
+        {
+            const string className = "PrefsVolume";
+            
+            var fieldsTexts = volumeComponentTypes.Select(type =>
+            {
+                var typeName = type.Name;
+                var fieldName = ToLowerOnlyFirst(typeName);
+                return $@"
+        public Prefs{typeName} {fieldName};";
+            });
+       
+            var sourceText =
+                $@"using System;
+using System.Collections.Generic;
+using UnityEngine.Rendering;
+
+namespace PrefsGUI.PostProcessingURP
+{{
+    [Serializable]
+    public partial class {className}
+    {{{string.Join("", fieldsTexts)}
+
+        private IReadOnlyList<IPrefsVolumeComponent> _volumeComponentPrefsList;
+
+        public IReadOnlyList<IPrefsVolumeComponent> VolumeComponentPrefsList
+            => _volumeComponentPrefsList ??= CreateVolumeComponentPrefsList();
+            
+        private List<IPrefsVolumeComponent> CreateVolumeComponentPrefsList()
+        {{
+            return new List<IPrefsVolumeComponent>{{{string.Join(",", volumeComponentTypes.Select(type => $@"
+                {ToLowerOnlyFirst(type.Name)}"))}
+            }};
+        }}
+    }}
+}}
+";     
+            context.AddSource(
+                hintName: $"{className}.g.cs",
+                sourceText: SourceText.From(sourceText, Encoding.UTF8));
+            
+            static string ToLowerOnlyFirst(string str)
+            {
+                if (string.IsNullOrEmpty(str)) return str;
+                return char.ToLowerInvariant(str[0]) + str.Substring(1);
             }
         }
     }
