@@ -126,10 +126,11 @@
       "url": "https://packages.unity.com"
     },
     "ga.fuquna.prefsgui": {
-      "version": "file:C:/unity/PrefsGUI/Packages/PrefsGUI",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "version": "3.3.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://registry.npmjs.com"
     },
     "ga.fuquna.prefsgui.postprocessingurp": {
       "version": "file:ga.fuquna.prefspostprocessingurp",
@@ -137,23 +138,24 @@
       "source": "embedded",
       "dependencies": {
         "com.unity.render-pipelines.universal": "14.0.8",
-        "ga.fuquna.prefsgui": "3.2.5",
-        "ga.fuquna.prefsgui.rosettaui": "1.0.2"
+        "ga.fuquna.prefsgui": "3.3.0",
+        "ga.fuquna.prefsgui.rosettaui": "1.1.0"
       }
     },
     "ga.fuquna.prefsgui.rosettaui": {
-      "version": "file:C:/unity/PrefsGUI/Packages/PrefsGUI.RosettaUI",
-      "depth": 0,
-      "source": "local",
+      "version": "1.1.0",
+      "depth": 1,
+      "source": "registry",
       "dependencies": {
-        "ga.fuquna.prefsgui": "3.2.4",
+        "ga.fuquna.prefsgui": "3.3.0",
         "ga.fuquna.rosettaui": "1.4.2",
         "ga.fuquna.rosettaui.uitoolkit": "1.4.1"
-      }
+      },
+      "url": "https://registry.npmjs.com"
     },
     "ga.fuquna.rosettaui": {
       "version": "1.4.2",
-      "depth": 1,
+      "depth": 2,
       "source": "registry",
       "dependencies": {},
       "url": "https://registry.npmjs.com"

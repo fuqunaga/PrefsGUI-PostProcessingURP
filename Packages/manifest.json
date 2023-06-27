@@ -8,8 +8,6 @@
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.8.0",
-    "ga.fuquna.prefsgui": "file:C:/unity/PrefsGUI/Packages/PrefsGUI",
-    "ga.fuquna.prefsgui.rosettaui": "file:C:/unity/PrefsGUI/Packages/PrefsGUI.RosettaUI",
     "ga.fuquna.rosettaui.uitoolkit": "1.4.1",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
