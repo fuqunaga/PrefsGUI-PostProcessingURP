@@ -5,24 +5,48 @@ using UnityEngine.Rendering;
 namespace PrefsGUI.PostProcessingURP
 {
     [Serializable]
-    public  abstract partial class PrefsVolumeComponent<TVolumeComponent> : IPrefsVolumeComponent
+    public abstract partial class PrefsVolumeComponent<TVolumeComponent> : IPrefsVolumeComponent
         where TVolumeComponent : VolumeComponent
     {
         protected static readonly string KeyPrefix = $"URP_{typeof(TVolumeComponent).Name}";
         
         public PrefsBool active = new($"{KeyPrefix}_Active");
-        
+
+        private VolumeProfile _volumeProfile;
         private TVolumeComponent _volumeComponent;
         
-        public bool Exists => _volumeComponent != null;
         
+        public Type ComponentType => typeof(TVolumeComponent);
+
+        public bool Exists
+        {
+            get
+            {
+                var exists = _volumeProfile != null && _volumeProfile.Has<TVolumeComponent>();
+                
+                // BindVolumeProfile()時はなかったけどあとからVolumeComponentが追加された場合を考慮
+                if (exists && _volumeComponent == null)
+                {
+                    BindVolumeProfileToPrefs();
+                }
+                return exists;
+            }
+        }
+
+
         public abstract IReadOnlyDictionary<string, IPrefsVolumeParameter> ParameterDictionary { get; }
         
         public virtual void BindVolumeProfile(VolumeProfile profile)
         {
             UnbindVolumeProfile();
-            
-            if (!profile.TryGet(out _volumeComponent)) return;
+
+            _volumeProfile = profile;
+            BindVolumeProfileToPrefs();
+        }
+
+        protected virtual void BindVolumeProfileToPrefs()
+        {
+            if (!_volumeProfile.TryGet(out _volumeComponent)) return;
 
             active.RegisterValueChangedCallbackAndCallOnce(OnValueChangedActive);
             BindVolumeComponentToParameters(_volumeComponent);
@@ -32,6 +56,7 @@ namespace PrefsGUI.PostProcessingURP
         {
             active.UnregisterValueChangedCallback(OnValueChangedActive);
             _volumeComponent = null;
+            _volumeProfile = null;
         }
         
         private void OnValueChangedActive() => _volumeComponent.active = active;
@@ -48,8 +73,9 @@ namespace PrefsGUI.PostProcessingURP
         }
     }
 
-    public interface IPrefsVolumeComponent
+    public partial interface IPrefsVolumeComponent
     {
+        Type ComponentType { get; }
         bool Exists { get; }
         void BindVolumeProfile(VolumeProfile profile);
         void UnbindVolumeProfile();

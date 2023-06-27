@@ -4,7 +4,7 @@ using UnityEngine.Rendering;
 
 namespace PrefsGUI.PostProcessingURP
 {
-    public abstract partial class PrefsVolumeComponent<TVolumeComponent> : IElementCreator
+    public abstract partial class PrefsVolumeComponent<TVolumeComponent>
         where TVolumeComponent : VolumeComponent
     {
         public Element CreateElement(LabelElement label)
@@ -23,5 +23,9 @@ namespace PrefsGUI.PostProcessingURP
                 })
             );
         }
+    }
+
+    public partial interface IPrefsVolumeComponent : IElementCreator
+    {
     }
 }
