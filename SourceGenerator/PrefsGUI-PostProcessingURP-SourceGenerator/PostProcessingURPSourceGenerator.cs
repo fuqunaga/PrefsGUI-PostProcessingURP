@@ -78,6 +78,8 @@ namespace PrefsGUI.PostProcessingURP.SourceGenerator
             var bindTexts = parameterAndValue.Select(pair => $@"
             {pair.field.Name}.Bind(component.{pair.field.Name});");
 
+            var resetTexts = parameterAndValue.Select(pair => $@"
+            {pair.field.Name}.Reset(component.{pair.field.Name});");
 
             var sourceText =
                 $@"using System;
@@ -99,6 +101,10 @@ namespace PrefsGUI.PostProcessingURP
 
         protected override void BindVolumeComponentToParameters({componentName} component)
         {{{string.Join("", bindTexts)}
+        }}
+
+        protected override void ResetVolumeComponentToParameters({componentName} component)
+        {{{string.Join("", resetTexts)}
         }}  
     }}
 }}
@@ -137,7 +143,7 @@ namespace PrefsGUI.PostProcessingURP
                 var typeName = type.Name;
                 var fieldName = ToLowerOnlyFirst(typeName);
                 return $@"
-        public Prefs{typeName} {fieldName};";
+        public Prefs{typeName} {fieldName} = new();";
             });
        
             var sourceText =

@@ -1,10 +1,9 @@
 ﻿using PrefsGUI.RosettaUI;
 using RosettaUI;
-using UnityEngine;
 
 namespace PrefsGUI.PostProcessingURP
 {
-    public partial class PrefsVolumeBehaviour : MonoBehaviour, IElementCreator
+    public partial class PrefsVolumeBehaviour : IElementCreator
     {
         public virtual Element CreateElement(LabelElement label)
         {

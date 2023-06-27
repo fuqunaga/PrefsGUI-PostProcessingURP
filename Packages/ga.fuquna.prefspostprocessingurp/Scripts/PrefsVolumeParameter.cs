@@ -57,6 +57,12 @@ namespace PrefsGUI.PostProcessingURP
         private void OnValueChangedOverrideState() => _volumeParameter.overrideState = overrideState;
 
         private void OnValueChanged() => _volumeParameter.value = value;
+
+        public void Reset(VolumeParameter<T> volumeParameter)
+        {
+            overrideState = new(overrideState.key, volumeParameter.overrideState);
+            value = new(value.key, volumeParameter.value);
+        }
     }
 
     public partial interface IPrefsVolumeParameter

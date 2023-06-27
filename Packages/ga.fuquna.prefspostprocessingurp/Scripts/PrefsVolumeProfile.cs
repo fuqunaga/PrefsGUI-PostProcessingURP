@@ -11,5 +11,13 @@ namespace PrefsGUI.PostProcessingURP
                 componentPrefs.BindVolumeProfile(profile);
             }
         }
+        
+        public void Reset(VolumeProfile profile)
+        {
+            foreach(var componentPrefs in VolumeComponentPrefsList)
+            {
+                componentPrefs.Reset(profile);
+            }
+        }
     }
 }

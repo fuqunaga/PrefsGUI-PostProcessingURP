@@ -61,9 +61,6 @@ namespace PrefsGUI.PostProcessingURP
         
         private void OnValueChangedActive() => _volumeComponent.active = active;
         
-
-        protected abstract void BindVolumeComponentToParameters(TVolumeComponent component);
-        
         public void BindVolumeComponentToParameters(VolumeComponent component)
         {
             if (component is TVolumeComponent c)
@@ -71,6 +68,20 @@ namespace PrefsGUI.PostProcessingURP
                 BindVolumeComponentToParameters(c);
             }
         }
+        
+        protected abstract void BindVolumeComponentToParameters(TVolumeComponent component);
+
+        
+        public void Reset(VolumeProfile profile)
+        {
+            if (profile.TryGet<TVolumeComponent>(out var component))
+            {
+                active = new(active.key, component.active);
+                ResetVolumeComponentToParameters(component);
+            }
+        }
+        
+        protected abstract void ResetVolumeComponentToParameters(TVolumeComponent component);
     }
 
     public partial interface IPrefsVolumeComponent
@@ -79,5 +90,6 @@ namespace PrefsGUI.PostProcessingURP
         bool Exists { get; }
         void BindVolumeProfile(VolumeProfile profile);
         void UnbindVolumeProfile();
+        void Reset(VolumeProfile profile);
     }
 }
