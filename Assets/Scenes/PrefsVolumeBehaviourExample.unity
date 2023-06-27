@@ -419,17 +419,17 @@ MonoBehaviour:
       threshold:
         overrideState:
           _key: URP_Bloom_Threshold_OverrideState
-          defaultValue: 0
+          defaultValue: 1
         value:
           _key: URP_Bloom_Threshold_Value
           defaultValue: 0.9
       intensity:
         overrideState:
           _key: URP_Bloom_Intensity_OverrideState
-          defaultValue: 0
+          defaultValue: 1
         value:
           _key: URP_Bloom_Intensity_Value
-          defaultValue: 0
+          defaultValue: 2
       scatter:
         overrideState:
           _key: URP_Bloom_Scatter_OverrideState
@@ -553,7 +553,7 @@ MonoBehaviour:
           defaultValue: 1
         value:
           _key: URP_ColorAdjustments_Postexposure_Value
-          defaultValue: 1.02
+          defaultValue: 0.5
       contrast:
         overrideState:
           _key: URP_ColorAdjustments_Contrast_OverrideState
@@ -617,7 +617,7 @@ MonoBehaviour:
           defaultValue: 1
         value:
           _key: URP_DepthOfField_Gaussianend_Value
-          defaultValue: 160.37
+          defaultValue: 100
       gaussianMaxRadius:
         overrideState:
           _key: URP_DepthOfField_Gaussianmaxradius_OverrideState
@@ -684,14 +684,14 @@ MonoBehaviour:
           defaultValue: 1
         value:
           _key: URP_FilmGrain_Type_Value
-          defaultValue: 0
+          defaultValue: 1
       intensity:
         overrideState:
           _key: URP_FilmGrain_Intensity_OverrideState
           defaultValue: 1
         value:
           _key: URP_FilmGrain_Intensity_Value
-          defaultValue: 0.487
+          defaultValue: 0.5
       response:
         overrideState:
           _key: URP_FilmGrain_Response_OverrideState
