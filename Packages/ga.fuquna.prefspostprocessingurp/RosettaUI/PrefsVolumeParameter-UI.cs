@@ -6,7 +6,7 @@ namespace PrefsGUI.PostProcessingURP
     public partial class PrefsVolumeParameter<T> 
         where T : struct
     {
-        public Element CreateElement(LabelElement label)
+        public virtual Element CreateElement(LabelElement label)
         {
             var element = UI.Row(
                 overrideState.CreateFieldRaw(),

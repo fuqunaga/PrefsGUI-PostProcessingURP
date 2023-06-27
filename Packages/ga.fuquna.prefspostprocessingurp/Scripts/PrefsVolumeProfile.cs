@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using UnityEngine.Rendering;
+﻿using UnityEngine.Rendering;
 
 namespace PrefsGUI.PostProcessingURP
 {
-    public partial class PrefsVolume
+    public partial class PrefsVolumeProfile
     {
         public void Bind(VolumeProfile profile)
         {

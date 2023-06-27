@@ -130,7 +130,7 @@ namespace PrefsGUI.PostProcessingURP
         
         private void GeneratePrefsVolume(List<INamedTypeSymbol> volumeComponentTypes, GeneratorExecutionContext context)
         {
-            const string className = "PrefsVolume";
+            const string className = "PrefsVolumeProfile";
             
             var fieldsTexts = volumeComponentTypes.Select(type =>
             {

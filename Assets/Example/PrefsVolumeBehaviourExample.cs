@@ -4,7 +4,7 @@ using UnityEngine;
 namespace PrefsGUI.PostProcessingURP.Example
 {
     [RequireComponent(typeof(RosettaUIRoot))]
-    public class PrefsVolumeProfileExample : MonoBehaviour
+    public class PrefsVolumeBehaviourExample : MonoBehaviour
     {
         private void Start()
         {
@@ -14,8 +14,12 @@ namespace PrefsGUI.PostProcessingURP.Example
 
         private Element CreateElement()
         {
-            return UI.Window(
+            return UI.Window(nameof(PrefsVolumeBehaviour),
                 UI.Page(
+                    UI.Row(
+                        UI.Button("Save", Prefs.Save),
+                        UI.Button("Load", Prefs.Load)
+                    ),
                     UI.FieldIfObjectFound<PrefsVolumeBehaviour>()
                 )
             );

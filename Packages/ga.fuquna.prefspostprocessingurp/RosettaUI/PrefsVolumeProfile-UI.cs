@@ -3,11 +3,11 @@ using RosettaUI;
 
 namespace PrefsGUI.PostProcessingURP
 {
-    public partial class PrefsVolume : IElementCreator
+    public partial class PrefsVolumeProfile : IElementCreator
     {
-        public Element CreateElement(LabelElement label)
+        public virtual Element CreateElement(LabelElement label)
         {
-            return UI.Fold(label,
+            return UI.Column(
                 VolumeComponentPrefsList.Select(componentPrefs =>
                     UI.DynamicElementIf(
                         () => componentPrefs.Exists,

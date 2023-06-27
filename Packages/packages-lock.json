@@ -137,7 +137,8 @@
       "source": "embedded",
       "dependencies": {
         "com.unity.render-pipelines.universal": "14.0.8",
-        "ga.fuquna.prefsgui": "3.2.5"
+        "ga.fuquna.prefsgui": "3.2.5",
+        "ga.fuquna.prefsgui.rosettaui": "1.0.2"
       }
     },
     "ga.fuquna.prefsgui.rosettaui": {
