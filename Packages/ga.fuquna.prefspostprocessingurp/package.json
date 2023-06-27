@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "displayName": "PrefsGUI - PostProcessingURP",
   "description": "PrefsGUI extensions for URP PostProcessing",
-  "unity": "2022.3",
+  "unity": "2021.3",
   "keywords": [
     "unity",
     "URP"
