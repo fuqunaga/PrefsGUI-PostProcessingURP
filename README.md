@@ -3,7 +3,7 @@
 PrefsGUI extensions for URP PostProcessing.  
 Automatic generation of UI, change of parameters at runtime and saving of their values.
 
-![screenshot](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/assets/821072/b7010c09-e853-4d24-9718-2060d3685bb8)
+![screenshot](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/assets/821072/688ec82e-2140-4bae-80f6-98496c657ae8)
 
 # Installation
 
