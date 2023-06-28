@@ -1,3 +1,10 @@
+# [ga.fuquna.prefsgui.postprocessingurp-v1.0.2](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/compare/ga.fuquna.prefsgui.postprocessingurp-v1.0.1...ga.fuquna.prefsgui.postprocessingurp-v1.0.2) (2023-06-28)
+
+
+### Bug Fixes
+
+* confict warning ([8018ec7](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/commit/8018ec79c1fd6e2e5bf2a8cefcdbc82998ca0e6f))
+
 # [ga.fuquna.prefsgui.postprocessingurp-v1.0.1](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/compare/ga.fuquna.prefsgui.postprocessingurp-v1.0.0...ga.fuquna.prefsgui.postprocessingurp-v1.0.1) (2023-06-28)
 
 
