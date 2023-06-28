@@ -42,7 +42,8 @@ Select `PrefsGUI - PostProcessingURP` and click the Install button
 3. (Optional)Call **SetDefaultValueFromVolume** from the `PrefsVolumeBehaviour` context menu sets the `Volume` values to the default values in the PrefsGUI.  
 *If `PrefsVolumeBehaviour` is attached to the same GameObject as the `Volume`, it is done automatically.
 
-![SetDefaultValueFromVolume](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/assets/821072/e15dfafe-84d5-4b74-849f-03e8913ad2ca)
+![SetDefaultValueFromVolume](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/assets/821072/2baf4342-09a7-4582-a350-b4ab3e016dca)
+
 
 
 # Reference
