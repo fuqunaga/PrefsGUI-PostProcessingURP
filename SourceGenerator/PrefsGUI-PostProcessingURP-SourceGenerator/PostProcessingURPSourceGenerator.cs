@@ -19,6 +19,9 @@ namespace PrefsGUI.PostProcessingURP.SourceGenerator
 
         public void Execute(GeneratorExecutionContext context)
         {
+            // avoid conflict warning
+            if (context.Compilation.AssemblyName != "PrefsGUI-PostProcessingURP") return;
+            
             var assemblySymbol = context.Compilation.SourceModule.ReferencedAssemblySymbols
                 .FirstOrDefault(a => a.Name == "Unity.RenderPipelines.Universal.Runtime");
 
