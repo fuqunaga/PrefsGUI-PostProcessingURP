@@ -49,5 +49,5 @@ Select `PrefsGUI - PostProcessingURP` and click the Install button
 
 # Reference
 
-- [PrefsGUI](https://github.com/fuqunaga/PrefsGUI)
-- [RosettaUI](https://github.com/fuqunaga/RosettaUI)
+- [PrefsGUI](https://github.com/fuqunaga/PrefsGUI) - Accessors and GUIs for persistent preference values using a JSON file
+- [RosettaUI](https://github.com/fuqunaga/RosettaUI) - Code-based UI library for development menus for Unity
