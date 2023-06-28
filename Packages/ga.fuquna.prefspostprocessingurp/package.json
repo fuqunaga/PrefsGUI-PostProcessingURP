@@ -1,6 +1,6 @@
 {
   "name": "ga.fuquna.prefsgui.postprocessingurp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "displayName": "PrefsGUI - PostProcessingURP",
   "description": "PrefsGUI extensions for URP PostProcessing",
   "unity": "2021.3",

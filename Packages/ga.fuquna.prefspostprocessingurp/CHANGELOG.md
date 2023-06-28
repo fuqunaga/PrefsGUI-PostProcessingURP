@@ -1,3 +1,10 @@
+# [ga.fuquna.prefsgui.postprocessingurp-v1.0.3](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/compare/ga.fuquna.prefsgui.postprocessingurp-v1.0.2...ga.fuquna.prefsgui.postprocessingurp-v1.0.3) (2023-06-28)
+
+
+### Bug Fixes
+
+* SetDirty() when PrefsVolumeBehaviour.SetDefaultValueFromVolume() ([12c652c](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/commit/12c652cdcbbf78844d1c085165eb62a1b3d264c3))
+
 # [ga.fuquna.prefsgui.postprocessingurp-v1.0.2](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/compare/ga.fuquna.prefsgui.postprocessingurp-v1.0.1...ga.fuquna.prefsgui.postprocessingurp-v1.0.2) (2023-06-28)
 
 
