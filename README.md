@@ -31,8 +31,9 @@ Select `MyRegistries` in `Packages:`
 
 ![Select MyRegistries](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/assets/821072/74b3b9b4-4a75-4dfa-b5b0-06999c8ad0ac)
 
+Select `PrefsGUI - PostProcessingURP` and click the Install button  
 
-Select `PrefsGUI - PostProcessingURP` and click the Install button
+![image](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/assets/821072/9375e0dc-0efb-48e6-9914-a715fddc9efc)
 
 
 # Usage
@@ -44,7 +45,6 @@ Select `PrefsGUI - PostProcessingURP` and click the Install button
 ![SetDefaultValueFromVolume](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/assets/821072/2baf4342-09a7-4582-a350-b4ab3e016dca)
 1. Follow the [RosettaUI](https://github.com/fuqunaga/RosettaUI) steps to display the PrefsVolumeBehaviour UI.  
    see [Example](Assets/Example/PrefsVolumeBehaviourExample.cs).
-
 
 
 # Reference
