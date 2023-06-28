@@ -429,7 +429,7 @@ MonoBehaviour:
           defaultValue: 1
         value:
           _key: URP_Bloom_Intensity_Value
-          defaultValue: 2
+          defaultValue: 3
       scatter:
         overrideState:
           _key: URP_Bloom_Scatter_OverrideState
@@ -553,7 +553,7 @@ MonoBehaviour:
           defaultValue: 1
         value:
           _key: URP_ColorAdjustments_Postexposure_Value
-          defaultValue: 0.5
+          defaultValue: 1.02
       contrast:
         overrideState:
           _key: URP_ColorAdjustments_Contrast_OverrideState
@@ -596,35 +596,35 @@ MonoBehaviour:
     depthOfField:
       active:
         _key: URP_DepthOfField_Active
-        defaultValue: 1
+        defaultValue: 0
       mode:
         overrideState:
           _key: URP_DepthOfField_Mode_OverrideState
-          defaultValue: 1
+          defaultValue: 0
         value:
           _key: URP_DepthOfField_Mode_Value
-          defaultValue: 1
+          defaultValue: 0
       gaussianStart:
         overrideState:
           _key: URP_DepthOfField_Gaussianstart_OverrideState
-          defaultValue: 1
+          defaultValue: 0
         value:
           _key: URP_DepthOfField_Gaussianstart_Value
-          defaultValue: 1
+          defaultValue: 0
       gaussianEnd:
         overrideState:
           _key: URP_DepthOfField_Gaussianend_OverrideState
-          defaultValue: 1
+          defaultValue: 0
         value:
           _key: URP_DepthOfField_Gaussianend_Value
-          defaultValue: 100
+          defaultValue: 0
       gaussianMaxRadius:
         overrideState:
           _key: URP_DepthOfField_Gaussianmaxradius_OverrideState
-          defaultValue: 1
+          defaultValue: 0
         value:
           _key: URP_DepthOfField_Gaussianmaxradius_Value
-          defaultValue: 1
+          defaultValue: 0
       highQualitySampling:
         overrideState:
           _key: URP_DepthOfField_Highqualitysampling_OverrideState
@@ -638,35 +638,35 @@ MonoBehaviour:
           defaultValue: 0
         value:
           _key: URP_DepthOfField_Focusdistance_Value
-          defaultValue: 10
+          defaultValue: 0
       aperture:
         overrideState:
           _key: URP_DepthOfField_Aperture_OverrideState
           defaultValue: 0
         value:
           _key: URP_DepthOfField_Aperture_Value
-          defaultValue: 5.6
+          defaultValue: 0
       focalLength:
         overrideState:
           _key: URP_DepthOfField_Focallength_OverrideState
           defaultValue: 0
         value:
           _key: URP_DepthOfField_Focallength_Value
-          defaultValue: 50
+          defaultValue: 0
       bladeCount:
         overrideState:
           _key: URP_DepthOfField_Bladecount_OverrideState
           defaultValue: 0
         value:
           _key: URP_DepthOfField_Bladecount_Value
-          defaultValue: 5
+          defaultValue: 0
       bladeCurvature:
         overrideState:
           _key: URP_DepthOfField_Bladecurvature_OverrideState
           defaultValue: 0
         value:
           _key: URP_DepthOfField_Bladecurvature_Value
-          defaultValue: 1
+          defaultValue: 0
       bladeRotation:
         overrideState:
           _key: URP_DepthOfField_Bladerotation_OverrideState
@@ -677,28 +677,28 @@ MonoBehaviour:
     filmGrain:
       active:
         _key: URP_FilmGrain_Active
-        defaultValue: 1
+        defaultValue: 0
       type:
         overrideState:
           _key: URP_FilmGrain_Type_OverrideState
-          defaultValue: 1
+          defaultValue: 0
         value:
           _key: URP_FilmGrain_Type_Value
-          defaultValue: 1
+          defaultValue: 0
       intensity:
         overrideState:
           _key: URP_FilmGrain_Intensity_OverrideState
-          defaultValue: 1
+          defaultValue: 0
         value:
           _key: URP_FilmGrain_Intensity_Value
-          defaultValue: 0.5
+          defaultValue: 0
       response:
         overrideState:
           _key: URP_FilmGrain_Response_OverrideState
           defaultValue: 0
         value:
           _key: URP_FilmGrain_Response_Value
-          defaultValue: 0.8
+          defaultValue: 0
     lensDistortion:
       active:
         _key: URP_LensDistortion_Active
@@ -954,35 +954,35 @@ MonoBehaviour:
     vignette:
       active:
         _key: URP_Vignette_Active
-        defaultValue: 0
+        defaultValue: 1
       color:
         overrideState:
           _key: URP_Vignette_Color_OverrideState
-          defaultValue: 0
+          defaultValue: 1
         value:
           _key: URP_Vignette_Color_Value
-          defaultValue: {r: 0, g: 0, b: 0, a: 0}
+          defaultValue: {r: 0, g: 0, b: 0, a: 1}
       center:
         overrideState:
           _key: URP_Vignette_Center_OverrideState
           defaultValue: 0
         value:
           _key: URP_Vignette_Center_Value
-          defaultValue: {x: 0, y: 0}
+          defaultValue: {x: 0.5, y: 0.5}
       intensity:
         overrideState:
           _key: URP_Vignette_Intensity_OverrideState
-          defaultValue: 0
+          defaultValue: 1
         value:
           _key: URP_Vignette_Intensity_Value
-          defaultValue: 0
+          defaultValue: 0.4
       smoothness:
         overrideState:
           _key: URP_Vignette_Smoothness_OverrideState
           defaultValue: 0
         value:
           _key: URP_Vignette_Smoothness_Value
-          defaultValue: 0
+          defaultValue: 0.2
       rounded:
         overrideState:
           _key: URP_Vignette_Rounded_OverrideState
@@ -993,7 +993,7 @@ MonoBehaviour:
     whiteBalance:
       active:
         _key: URP_WhiteBalance_Active
-        defaultValue: 0
+        defaultValue: 1
       temperature:
         overrideState:
           _key: URP_WhiteBalance_Temperature_OverrideState

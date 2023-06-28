@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿#if UNITY_EDITOR
+using UnityEditor;
+#endif
+using UnityEngine;
 using UnityEngine.Rendering;
 
 namespace PrefsGUI.PostProcessingURP
@@ -28,10 +31,18 @@ namespace PrefsGUI.PostProcessingURP
                 if (!TryGetComponent(out volume)) return;
             }
 
+#if UNITY_EDITOR
+            Undo.RecordObject(this, nameof(SetDefaultValueFromVolume));
+#endif
+            
             prefsVolumeWait = new(prefsVolumeWait.key, volume.weight);
 
             var profile = volume.profile;
             prefsVolumeProfile.Reset(profile);
+
+#if UNITY_EDITOR
+            EditorUtility.SetDirty(this);
+#endif
         }
     }
 }
