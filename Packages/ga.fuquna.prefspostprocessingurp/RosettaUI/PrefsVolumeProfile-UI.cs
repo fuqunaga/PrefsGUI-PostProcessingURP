@@ -22,12 +22,5 @@ namespace PrefsGUI.PostProcessingURP
                 )
             );
         }
-        // VolumeComponentPrefsList.Select(componentPrefs =>
-                //     UI.DynamicElementIf(
-                //         () => componentPrefs.Exists,
-                //         () => UI.Field(componentPrefs.ComponentType.Name, () => componentPrefs))
-                // )
-        //     );
-        // }
     }
 }
