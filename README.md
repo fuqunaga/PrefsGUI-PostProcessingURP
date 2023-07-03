@@ -47,6 +47,12 @@ Select `PrefsGUI - PostProcessingURP` and click the Install button
    see [Example](Assets/Example/PrefsVolumeBehaviourExample.cs).
 
 
+# Tips
+## Changing Prefs keys for multiple instances
+
+Prefix keys can be added or changed in batches from the editor window.  
+See [PrefsGUI.EditorWindow](https://github.com/fuqunaga/PrefsGUI#editorwindow).
+
 # Reference
 
 - [PrefsGUI](https://github.com/fuqunaga/PrefsGUI) - Accessors and GUIs for persistent preference values using a JSON file
