@@ -44,7 +44,7 @@ Select `PrefsGUI - PostProcessingURP` and click the Install button
 *If `PrefsVolumeBehaviour` is attached to the same GameObject as the `Volume`, it is done automatically.  
 ![SetDefaultValueFromVolume](https://github.com/fuqunaga/PrefsGUI-PostProcessingURP/assets/821072/2baf4342-09a7-4582-a350-b4ab3e016dca)
 1. Follow the [RosettaUI](https://github.com/fuqunaga/RosettaUI) steps to display the PrefsVolumeBehaviour UI.  
-   see [Example](Assets/Example/PrefsVolumeBehaviourExample.cs).
+   See [Example](Assets/Example/PrefsVolumeBehaviourExample.cs).
 
 
 # Tips
