@@ -16,7 +16,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        pkg_root: [./Packages/ga.fuquna.prefspostprocessingurp]
+        pkg_root: [./Packages/ga.fuquna.prefsgui.postprocessingurp]
 
     steps:
     - name: Checkout
