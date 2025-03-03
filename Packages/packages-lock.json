@@ -133,7 +133,7 @@
       "url": "https://registry.npmjs.com"
     },
     "ga.fuquna.prefsgui.postprocessingurp": {
-      "version": "file:ga.fuquna.prefspostprocessingurp",
+      "version": "file:ga.fuquna.prefsgui.postprocessingurp",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
