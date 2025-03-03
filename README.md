@@ -1,5 +1,8 @@
 # PrefsGUI-PostProcessingURP
 
+[![npm version](https://badge.fury.io/js/ga.fuquna.prefsgui.postprocessingurp.svg)](https://badge.fury.io/js/ga.fuquna.prefsgui.postprocessingurp)
+[![openupm](https://img.shields.io/npm/v/ga.fuquna.prefsgui.postprocessingurp?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/ga.fuquna.prefsgui.postprocessingurp/)
+
 [PrefsGUI](https://github.com/fuqunaga/PrefsGUI) extensions for URP PostProcessing.  
 Automatic generation of UI, changing parameters at runtime and saving their values.
 
